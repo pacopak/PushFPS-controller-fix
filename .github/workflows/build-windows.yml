@@ -210,7 +210,7 @@ jobs:
           git -C chiaki-clean submodule update -q --init --recursive
           git -C chiaki-clean worktree add -q --detach "$env:DEPS\chiaki-stage" $env:CHIAKI_COMMIT
           git -C chiaki-stage submodule update -q --init --recursive
-          foreach ($p in '0001-chiaki-msvc-vla-compat.patch', '0002-chiaki-video-metadata.patch', '0003-chiaki-feedback-history.patch') {
+          foreach ($p in '0001-chiaki-msvc-vla-compat.patch', '0002-chiaki-video-metadata.patch', '0003-chiaki-feedback-history.patch', '0004-chiaki-padprocno.patch') {
             git -C chiaki-stage apply "$env:GITHUB_WORKSPACE\scripts\remoteplay\patches\$p"
             if ($LASTEXITCODE -ne 0) { Write-Host "::error::$p does not apply"; exit 1 }
           }

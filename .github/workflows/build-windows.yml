@@ -10,7 +10,7 @@
 # SDK's two interface headers (base64 of a zip, from the owner's own SDK download, never committed or uploaded),
 # the build compiles NVIDIA optical flow in as Veyra does; without it, NVIDIA optical flow reports unavailable
 # and AMD FidelityFX optical flow is used (src/ngx/NvOfSessionUnavailable.cpp).
-name: build-windows
+name: build-windows 
 
 on:
   push:
